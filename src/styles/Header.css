@@ -1,9 +1,9 @@
 header {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
+
+  /* padding: 10px 40px; */
 }
 
 .logoDiv {
@@ -21,16 +21,28 @@ img {
 }
 
 nav {
+  padding: 4px;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 20px;
 }
 
 .navLinks {
-  color: black;
+  color: blue;
+  font-size: 20px;
+  letter-spacing: 1.3px;
   text-decoration: none;
+  opacity: 0.5;
 }
+
+.verticalSeparator {
+  flex: 1;
+  border-left: 2px solid black;
+}
+
+/* another class for Navling, but when it is clicked */
 
 .active {
   text-decoration: underline;
+  opacity: 1;
 }
