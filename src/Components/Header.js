@@ -1,4 +1,4 @@
-import './Header.css';
+import '../styles/Header.css';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/planetLogo.png';
 
@@ -10,8 +10,8 @@ const Header = () => (
     </a>
     <nav>
       <NavLink to="/" className="navLinks">Rockets</NavLink>
-      <NavLink to="missions" className="navLinks">Mission</NavLink>
-      <NavLink to="/myProfile" className="navLinks" activeClassName="active">My Profile</NavLink>
+      <NavLink to="missions" className="navLinks">Missions</NavLink>
+      <NavLink to="/myProfile" className="navLinks" activeclassname="active">My Profile</NavLink>
     </nav>
   </header>
 );
