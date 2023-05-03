@@ -1,0 +1,29 @@
+.reserved-rockets {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+}
+
+.reserved-rockets ul {
+  list-style: none;
+}
+
+.rocket-list-container {
+  flex: 1 1 50%;
+  order: 2;
+  list-style: none;
+  padding: 5px;
+}
+
+.rocket-list {
+  margin-top: 5px;
+  border: 1px solid black;
+}
+
+.rocket-item {
+  border-bottom: 1px solid black;
+  padding: 15px 5px;
+}

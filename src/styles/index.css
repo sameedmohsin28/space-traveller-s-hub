@@ -1,5 +1,13 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  --blue: #007bff;
+  --badge-color: #18a2b8;
+
+  padding: 4px 3%;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -24,4 +32,12 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
