@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import {
   Routes, Route, useNavigate, useLocation,
 } from 'react-router-dom';
-import { Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import MyProfile from './Components/MyProfile';
 import Rockets from './Components/Rockets';
