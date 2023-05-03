@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import rocketsApi from '../api';
+import { rocketsApi } from '../api';
 
 const initialState = {
   reservationList: [],

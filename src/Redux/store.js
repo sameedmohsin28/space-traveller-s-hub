@@ -1,7 +1,9 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import missionsSlice from './missions/missionsSlice';
 import rocketSlice from './rockets/rocketsSlice';
 
 const rootReducer = combineReducers({
+  missionsReducer: missionsSlice.reducer,
   reservationListKey: rocketSlice.reducer,
 });
 

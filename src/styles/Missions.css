@@ -1,0 +1,28 @@
+table {
+  display: flex;
+  flex-direction: column;
+  padding: 0 80px;
+  gap: 20px;
+}
+
+thead > tr {
+  display: grid;
+  grid-template-columns: 0.1fr 0.65fr 0.11fr 0.14fr;
+  gap: 5px;
+}
+
+tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+tbody > tr {
+  display: grid;
+  grid-template-columns: 0.1fr 0.65fr 0.11fr 0.14fr;
+  gap: 10px;
+}
+
+tbody > tr > td:nth-last-child(2) {
+  padding: 0;
+}
