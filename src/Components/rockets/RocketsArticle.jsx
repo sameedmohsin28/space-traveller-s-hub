@@ -1,13 +1,16 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes, { string } from 'prop-types';
-import { addReservation } from '../../Redux/rockets/rocketsSlice';
+import { addReservation, cancelReservation } from '../../Redux/rockets/rocketsSlice';
 import '../../styles/RocketArticle.css';
 
 const ArticleComponent = ({ articleData }) => {
   const dispatch = useDispatch();
-  const reservationHandler = (id) => {
+  const reserveHandler = (id) => {
     dispatch(addReservation(id));
+  };
+  const cancelHandler = (id) => {
+    dispatch(cancelReservation(id));
   };
   return (
     <article id={articleData.id}>
@@ -23,15 +26,21 @@ const ArticleComponent = ({ articleData }) => {
           {articleData.name}
         </h2>
         <p className="article-description">
+          {articleData.reserved && (
+            <h2>Reserved available</h2>
+          )}
           {articleData.description}
         </p>
-
         <button
           className="article-button"
           type="button"
-          onClick={() => reservationHandler(articleData.id)}
+          onClick={
+            articleData.reserved
+              ? () => cancelHandler(articleData.id)
+              : () => reserveHandler(articleData.id)
+            }
         >
-          Reserve Rocket
+          {articleData.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
         </button>
 
       </div>
@@ -46,6 +55,7 @@ ArticleComponent.propTypes = {
       name: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+      reserved: PropTypes.oneOfType([undefined, PropTypes.bool]),
     },
   ).isRequired,
 };
