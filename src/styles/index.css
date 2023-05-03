@@ -1,5 +1,9 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+}
+
+body {
   padding: 4px 3%;
   font-family:
     -apple-system,
@@ -32,5 +36,5 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  padding: 10px;
 }
