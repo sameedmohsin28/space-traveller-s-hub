@@ -7,6 +7,11 @@ const initialState = {
 const rocketSlice = createSlice({
   name: 'rockets',
   initialState,
+  reducers: {
+    addReservation: (state, { payload }) => {
+      console.log(state, payload);
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(rocketsApi.fulfilled, (state, { payload }) => {
       const selectedData = [];
@@ -32,4 +37,5 @@ const rocketSlice = createSlice({
   },
 });
 
+export const { addReservation } = rocketSlice.actions;
 export default rocketSlice;

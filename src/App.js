@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import Header from './Components/Header';
 import MyProfile from './Components/MyProfile';
-import Rockets from './Components/Rockets';
+import Rockets from './Components/rockets/Rockets';
 import Missions from './Components/Missions';
 import rocketsApi from './Redux/api';
 

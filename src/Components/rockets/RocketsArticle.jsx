@@ -1,9 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes, { string } from 'prop-types';
-import '../styles/RocketArticle.css';
+import { addReservation } from '../../Redux/rockets/rocketsSlice';
+import '../../styles/RocketArticle.css';
 
-const ArticleComponent = ({ articleData }) => (
-  <>
+const ArticleComponent = ({ articleData }) => {
+  const dispatch = useDispatch();
+  const reservationHandler = (id) => {
+    dispatch(addReservation(id));
+  };
+  return (
     <article id={articleData.id}>
       <div className="img-container">
         <img
@@ -19,11 +25,19 @@ const ArticleComponent = ({ articleData }) => (
         <p className="article-description">
           {articleData.description}
         </p>
-        <button className="article-button" type="button">Reserve Rocket</button>
+
+        <button
+          className="article-button"
+          type="button"
+          onClick={() => reservationHandler(articleData.id)}
+        >
+          Reserve Rocket
+        </button>
+
       </div>
     </article>
-  </>
-);
+  );
+};
 
 ArticleComponent.propTypes = {
   articleData: PropTypes.shape(

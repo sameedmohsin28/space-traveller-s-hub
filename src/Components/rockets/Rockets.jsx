@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import ArticleComponent from './RocketsArticle';
-import '../styles/Rockets.css';
+import '../../styles/Rockets.css';
 
 const Rockets = () => {
   const stateData = useSelector((store) => (store.reservationListKey.reservationList));
