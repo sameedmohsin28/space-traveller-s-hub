@@ -7,7 +7,7 @@ table {
 
 thead > tr {
   display: grid;
-  grid-template-columns: .1fr .65fr .11fr .14fr;
+  grid-template-columns: 0.1fr 0.65fr 0.11fr 0.14fr;
   gap: 5px;
 }
 
@@ -19,11 +19,10 @@ tbody {
 
 tbody > tr {
   display: grid;
-  grid-template-columns: .1fr .65fr .11fr .14fr;
+  grid-template-columns: 0.1fr 0.65fr 0.11fr 0.14fr;
   gap: 10px;
 }
 
 tbody > tr > td:nth-last-child(2) {
-  al
+  padding: 0;
 }
-
