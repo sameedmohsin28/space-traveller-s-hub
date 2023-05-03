@@ -4,6 +4,9 @@
 }
 
 body {
+  --blue: #007bff;
+  --badge-color: #18a2b8;
+
   padding: 4px 3%;
   font-family:
     -apple-system,

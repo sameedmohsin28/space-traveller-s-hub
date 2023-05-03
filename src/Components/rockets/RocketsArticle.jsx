@@ -26,13 +26,19 @@ const ArticleComponent = ({ articleData }) => {
           {articleData.name}
         </h2>
         <p className="article-description">
-          {articleData.reserved && (
-            <h2>Reserved available</h2>
-          )}
+          {
+            articleData.reserved && (
+              <span className="badge">Reserved</span>
+            )
+          }
           {articleData.description}
         </p>
         <button
-          className="article-button"
+          className={
+            articleData.reserved
+              ? 'article-button cancel-btn'
+              : 'article-button'
+            }
           type="button"
           onClick={
             articleData.reserved
@@ -40,7 +46,11 @@ const ArticleComponent = ({ articleData }) => {
               : () => reserveHandler(articleData.id)
             }
         >
-          {articleData.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+          {
+            articleData.reserved
+              ? 'Cancel Reservation'
+              : 'Reserve Rocket'
+          }
         </button>
 
       </div>

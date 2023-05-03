@@ -30,7 +30,7 @@ nav {
 }
 
 .navLinks {
-  color: blue;
+  color: var(--blue);
   font-size: 20px;
   letter-spacing: 1.3px;
   text-decoration: none;
