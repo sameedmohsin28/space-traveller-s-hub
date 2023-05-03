@@ -5,6 +5,7 @@ import '../../styles/Rockets.css';
 
 const Rockets = () => {
   const stateData = useSelector((store) => (store.reservationListKey.reservationList));
+
   return (
     <section className="reservation-wrapper">
       {

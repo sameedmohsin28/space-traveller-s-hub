@@ -65,7 +65,8 @@ ArticleComponent.propTypes = {
       name: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      reserved: PropTypes.oneOfType([undefined, PropTypes.bool]),
+      //  for udefined, false, true, null validation
+      reserved: PropTypes.oneOfType([PropTypes.bool]),
     },
   ).isRequired,
 };
