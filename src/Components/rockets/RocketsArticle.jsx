@@ -6,12 +6,26 @@ import '../../styles/RocketArticle.css';
 
 const ArticleComponent = ({ articleData }) => {
   const dispatch = useDispatch();
+
+  const btnClass = articleData.reserved
+    ? 'article-button cancel-btn'
+    : 'article-button';
+
+  const btnText = articleData.reserved
+    ? 'Cancel Reservation'
+    : 'Reserve Rocket';
+
   const reserveHandler = (id) => {
     dispatch(addReservation(id));
   };
   const cancelHandler = (id) => {
     dispatch(cancelReservation(id));
   };
+
+  const handler = articleData.reserved
+    ? () => cancelHandler(articleData.id)
+    : () => reserveHandler(articleData.id);
+
   return (
     <article id={articleData.id}>
       <div className="img-container">
@@ -34,23 +48,11 @@ const ArticleComponent = ({ articleData }) => {
           {articleData.description}
         </p>
         <button
-          className={
-            articleData.reserved
-              ? 'article-button cancel-btn'
-              : 'article-button'
-            }
+          className={btnClass}
           type="button"
-          onClick={
-            articleData.reserved
-              ? () => cancelHandler(articleData.id)
-              : () => reserveHandler(articleData.id)
-            }
+          onClick={handler}
         >
-          {
-            articleData.reserved
-              ? 'Cancel Reservation'
-              : 'Reserve Rocket'
-          }
+          {btnText}
         </button>
 
       </div>
@@ -65,7 +67,7 @@ ArticleComponent.propTypes = {
       name: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      //  for udefined, false, true, null validation
+      //  for undefined, false, true, null validation
       reserved: PropTypes.oneOfType([PropTypes.bool]),
     },
   ).isRequired,
