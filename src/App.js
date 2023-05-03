@@ -4,7 +4,7 @@ import {
   Routes, Route, useNavigate, useLocation,
 } from 'react-router-dom';
 import Header from './Components/Header';
-import MyProfile from './Components/MyProfile';
+import MyProfile from './Components/myProfile/MyProfile';
 import Rockets from './Components/rockets/Rockets';
 import Missions from './Components/Missions';
 import rocketsApi from './Redux/api';
