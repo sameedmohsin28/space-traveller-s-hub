@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import '../styles/Rockets.css';
 
 const Rockets = () => {
-  const storedData = useSelector((store) => (store));
-  console.log(storedData);
+  const stateData = useSelector((store) => (store));
+  console.log(stateData);
   return (
     <section className="reservation-wrapper">
       <article>
