@@ -7,7 +7,7 @@ import Header from './Components/Header';
 import MyProfile from './Components/myProfile/MyProfile';
 import Rockets from './Components/rockets/Rockets';
 import Missions from './Components/Missions';
-import rocketsApi from './Redux/api';
+import { rocketsApi } from './Redux/api';
 
 function App() {
   const dispatch = useDispatch();

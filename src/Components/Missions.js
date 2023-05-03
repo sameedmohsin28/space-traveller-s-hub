@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import fetchMissions from '../Redux/api';
+import { fetchMissions } from '../Redux/api';
 import { setReservationTrue, setReservationFalse } from '../Redux/missions/missionsSlice';
 
 const Missions = () => {
