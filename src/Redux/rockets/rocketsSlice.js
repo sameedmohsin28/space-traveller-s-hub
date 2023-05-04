@@ -51,10 +51,6 @@ const rocketSlice = createSlice({
       }
       );
     });
-
-    builder.addCase(rocketsApi.rejected, () => (
-      console.log('rejected api')
-    ));
   },
 });
 

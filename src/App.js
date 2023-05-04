@@ -6,8 +6,8 @@ import {
 import Header from './Components/Header';
 import MyProfile from './Components/myProfile/MyProfile';
 import Rockets from './Components/rockets/Rockets';
-import Missions from './Components/Missions';
-import rocketsApi from './Redux/api';
+import Missions from './Components/missions/Missions';
+import { fetchMissions, rocketsApi } from './Redux/api';
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +19,8 @@ function App() {
       navigate('/');
     }
     dispatch(rocketsApi());
+    dispatch(fetchMissions());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

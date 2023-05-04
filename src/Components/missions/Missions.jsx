@@ -1,13 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import fetchMissions from '../Redux/api';
-import { setReservationTrue, setReservationFalse } from '../Redux/missions/missionsSlice';
+import { setReservationTrue, setReservationFalse } from '../../Redux/missions/missionsSlice';
+import '../../styles/Missions.css';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
   const { missionsArray } = useSelector((store) => (store.missionsReducer));
   // console.log(missionsArray);
 
@@ -18,7 +14,7 @@ const Missions = () => {
           <th>Mission</th>
           <th>Description</th>
           <th>Status</th>
-          <th>ActiveButton</th>
+          <th> </th>
         </tr>
       </thead>
       <tbody>
@@ -28,14 +24,14 @@ const Missions = () => {
             <td>{entry.description}</td>
             {!entry.reserved && (
               <>
-                <td>NOT A MEMBER</td>
-                <td><button type="submit" onClick={() => dispatch(setReservationTrue(entry.mission_id))}>Join Mission</button></td>
+                <td><div className="notAMember">NOT A MEMBER</div></td>
+                <td><button type="submit" className="joinMission" onClick={() => dispatch(setReservationTrue(entry.mission_id))}>Join Mission</button></td>
               </>
             )}
             {entry.reserved && (
               <>
-                <td>Active Member</td>
-                <td><button type="submit" onClick={() => dispatch(setReservationFalse(entry.mission_id))}>Leave Mission</button></td>
+                <td><div className="activeMember">Active Member</div></td>
+                <td><button type="submit" className="leaveMission" onClick={() => dispatch(setReservationFalse(entry.mission_id))}>Leave Mission</button></td>
               </>
             )}
           </tr>
