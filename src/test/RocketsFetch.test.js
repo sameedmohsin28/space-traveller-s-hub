@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom';
 import rocketApiMock from './Mocks/Rocket_API_MOCK';
 
 describe('Validation for fetching Rockets', () => {
