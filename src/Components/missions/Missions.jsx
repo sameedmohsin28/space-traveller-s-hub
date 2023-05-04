@@ -5,8 +5,7 @@ import '../../styles/Missions.css';
 const Missions = () => {
   const dispatch = useDispatch();
   const { missionsArray } = useSelector((store) => (store.missionsReducer));
-  // console.log(missionsArray);
-
+  
   return (
     <table>
       <thead>
