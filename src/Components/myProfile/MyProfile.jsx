@@ -17,7 +17,7 @@ const MyProfile = () => {
           {
             myProfileArray?.map((item) => (
               <li className="missions-item" key={item.mission_id} id={item.mission_id}>
-                <h2>{item.mission_name}</h2>
+                <h3>{item.mission_name}</h3>
               </li>
             ))
           }
@@ -29,7 +29,7 @@ const MyProfile = () => {
           {
             reservedRockets.map((rocket) => (
               <li className="rocket-item" key={rocket.id} id={rocket.id}>
-                <h2>{rocket.name}</h2>
+                <h3>{rocket.name}</h3>
               </li>
             ))
           }

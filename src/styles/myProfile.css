@@ -10,23 +10,7 @@
   list-style: none;
 }
 
-.missions-list-container {
-  flex: 1 1 50%;
-  order: 2;
-  list-style: none;
-  padding: 5px;
-}
-
-.missions-list {
-  margin-top: 5px;
-  border: 1px solid rgb(179, 178, 178);
-}
-
-.missions-item {
-  border-bottom: 1px solid rgb(179, 178, 178);
-  padding: 15px 5px;
-}
-
+.missions-list-container,
 .rocket-list-container {
   flex: 1 1 50%;
   order: 2;
@@ -34,12 +18,14 @@
   padding: 5px;
 }
 
+.missions-list,
 .rocket-list {
   margin-top: 5px;
   border: 1px solid rgb(179, 178, 178);
 }
 
+.missions-item,
 .rocket-item {
   border-bottom: 1px solid rgb(179, 178, 178);
-  padding: 15px 5px;
+  padding: 10px 15px 20px 15px;
 }
