@@ -67,7 +67,7 @@ Allows users to
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Coming Soon](https://google.com)
+- [Space Traveller's Hub](https://space-travellers-sameed-ali.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
