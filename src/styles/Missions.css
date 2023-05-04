@@ -1,28 +1,95 @@
 table {
   display: flex;
   flex-direction: column;
-  padding: 0 80px;
-  gap: 20px;
+  padding: 0 50px;
 }
 
 thead > tr {
   display: grid;
-  grid-template-columns: 0.1fr 0.65fr 0.11fr 0.14fr;
-  gap: 5px;
+  grid-template-columns: 10% 65% 11% 14%;
+}
+
+thead > tr > th {
+  border: 1px solid rgb(185, 182, 182);
+  border-right: none;
+  padding: 10px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+thead > tr > th:nth-last-child(1) {
+  border-right: 1px solid rgb(185, 182, 182);
 }
 
 tbody {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 tbody > tr {
   display: grid;
-  grid-template-columns: 0.1fr 0.65fr 0.11fr 0.14fr;
-  gap: 10px;
+  grid-template-columns: 10% 65% 11% 14%;
 }
 
-tbody > tr > td:nth-last-child(2) {
-  padding: 0;
+tbody > tr > td {
+  padding: 10px;
+  border-bottom: 1px solid rgb(185, 182, 182);
+  border-left: 1px solid rgb(185, 182, 182);
+}
+
+tbody > tr > td:nth-last-child(1) {
+  border-right: 1px solid rgb(185, 182, 182);
+}
+
+tbody > tr > td:nth-child(1) {
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+tbody > tr > td:nth-child(3) {
+  font-size: 13px;
+}
+
+tbody > tr > td:nth-child(n+3) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.notAMember {
+  background-color: #18a2b8;
+  padding: 3px;
+  color: white;
+  border-radius: 5px;
+}
+
+.activeMember {
+  background-color: #6d757d;
+  padding: 3px;
+  color: white;
+  border-radius: 5px;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.joinMission {
+  color: #343a40;
+  border: 1px solid #343a40;
+  word-wrap: break-word;
+}
+
+.leaveMission {
+  color: #ec5766;
+  border: 1px solid #ec5766;
+  word-wrap: break-word;
 }
