@@ -38,7 +38,7 @@ const MyProfile = () => {
             reservedRockets.map((rocket) => (
               <li className="rocket-item" key={rocket.id} id={rocket.id}>
                 <h3>{rocket.name}</h3>
-                <button className="article-button cancel-btn" type="button" onClick={() => dispatch(cancelReservation(rocket.id))}>Cancel Reservation</button>
+                <button className="article-button cancel-btn" type="button" onClick={() => dispatch(cancelReservation(rocket.id))}>Cancel Reservatio</button>
               </li>
             ))
           }
