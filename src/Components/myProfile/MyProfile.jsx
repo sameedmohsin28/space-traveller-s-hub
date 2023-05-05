@@ -27,6 +27,9 @@ const MyProfile = () => {
             ))
           }
         </ul>
+        {!myProfileArray.length && (
+          <p className="empty-missions">No Missions Joined</p>
+        )}
       </div>
       <div className="rocket-list-container">
         <h2>My Rockets</h2>
@@ -40,6 +43,9 @@ const MyProfile = () => {
             ))
           }
         </ul>
+        {!reservedRockets.length && (
+          <p className="empty-rockets">No Rockets Reserved</p>
+        )}
       </div>
     </section>
   );

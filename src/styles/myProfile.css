@@ -27,9 +27,21 @@
 .missions-item,
 .rocket-item {
   border-bottom: 1px solid rgb(179, 178, 178);
-  padding: 10px 15px 20px 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+.missions-item {
+  padding: 10px 15px 13px 15px;
+}
+
+.rocket-item {
+  padding: 10px 15px 20px 15px;
+}
+
+.empty-missions,
+.empty-rockets {
+  padding-top: 20px;
+  font-style: italic;
+}
