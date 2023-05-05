@@ -48,6 +48,7 @@ tbody > tr > td:nth-child(1) {
 
 tbody > tr > td:nth-child(3) {
   font-size: 13px;
+  text-align: center;
 }
 
 tbody > tr > td:nth-child(n+3) {
@@ -62,14 +63,14 @@ tbody > tr:nth-child(odd) {
 }
 
 .notAMember {
-  background-color: #18a2b8;
+  background-color: #6d757d;
   padding: 3px;
   color: white;
   border-radius: 5px;
 }
 
 .activeMember {
-  background-color: #6d757d;
+  background-color: #18a2b8;
   padding: 3px;
   color: white;
   border-radius: 5px;

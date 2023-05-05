@@ -14,9 +14,10 @@ const missionsSlice = createSlice(
       setReservationTrue: (state, action) => (
         {
           ...state,
-          // eslint-disable-next-line max-len
           missionsArray: state.missionsArray.map((clickedMission) => {
-            if (clickedMission.mission_id !== action.payload) return clickedMission;
+            if (clickedMission.mission_id !== action.payload) {
+              return clickedMission;
+            }
             return { ...clickedMission, reserved: true };
           }),
         }
@@ -50,4 +51,5 @@ const missionsSlice = createSlice(
 );
 
 export const { setReservationTrue, setReservationFalse } = missionsSlice.actions;
+
 export default missionsSlice;

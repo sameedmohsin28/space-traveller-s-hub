@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyProfile rendering Validation MyProfile should render with /myProfile url 1`] = `null`;
