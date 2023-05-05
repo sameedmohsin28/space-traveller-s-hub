@@ -51,4 +51,5 @@ const missionsSlice = createSlice(
 );
 
 export const { setReservationTrue, setReservationFalse } = missionsSlice.actions;
+
 export default missionsSlice;
