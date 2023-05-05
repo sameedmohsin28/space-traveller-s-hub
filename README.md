@@ -92,10 +92,6 @@ Clone this repository to your desired folder:
 Install this project with:
 
 `npm install`
-`npm install @reduxjs/toolkit`
-`npm install react-redux`
-`npm install prop-types`
-`npm install axios`
 
 ### Usage
 
